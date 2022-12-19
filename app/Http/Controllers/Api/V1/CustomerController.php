@@ -75,13 +75,13 @@ class CustomerController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCustomerRequest  $request
+     * @param  \App\Http\Requests\V1\UpdateCustomerRequest  $request
      * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
-        //
+       return $customer->update($request->all());
     }
 
     /**
